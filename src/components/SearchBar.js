@@ -15,16 +15,16 @@ const SearchBar = ({ setFilteredProducts }) => {
   };
 
   return (
-    <div className="flex justify-center mb-4">
+    <div className="flex content-between justify-center items-center">
       <input
         type="text"
-        className="bg-white border border-gray-400 p-2 rounded mr-2"
+        className="bg-white border border-gray-400 p-2 rounded mr-2 w-64 h-9"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search products"
       />
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-green-400 hover:bg-green-500 text-white text-center font-bold p-auto rounded h-9 w-24"
         onClick={handleSearch}
       >
         Search

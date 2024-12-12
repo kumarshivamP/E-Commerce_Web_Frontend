@@ -18,16 +18,18 @@ const ShopPage = () => {
   }, [])
 
   useEffect(() => {
-    setFilteredProducts(products)
+    setFilteredProducts(products);
   }, [products])
 
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Shop Page</h1>
-      <SearchBar setFilteredProducts={setFilteredProducts} />
+    <div className="flex flex-col">
+      <div className='flex justify-between bg-violet-700 items-center px-8'>
+        <h1 className="text-3xl font-bold py-2 text-white">Shop Page</h1>
+        <SearchBar setFilteredProducts={setFilteredProducts} />
+      </div>
       <Filter products={products} setFilteredProducts={setFilteredProducts} />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-4 px-8">
         {filteredProducts?.map((product) => (
           <Product key={product.id} product={product} />
         ))}

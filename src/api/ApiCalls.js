@@ -44,3 +44,19 @@ export const searchByKeyword = async (query) => {
     }
 
 }
+
+export const fetchFilteredProduct = async (query) => {
+    try {
+        const res = await fetch(`${URL}/product/filter-products`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(query)
+        });
+        return await res.json();
+    } catch (e) {
+        console.log("error", e);
+    }
+
+}
