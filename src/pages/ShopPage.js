@@ -29,7 +29,7 @@ const ShopPage = () => {
         <SearchBar setFilteredProducts={setFilteredProducts} />
       </div>
       <Filter products={products} setFilteredProducts={setFilteredProducts} />
-      <div className="grid grid-cols-3 gap-4 px-8">
+      <div className="grid grid-cols-3 gap-8 px-8">
         {filteredProducts?.map((product) => (
           <Product key={product.id} product={product} />
         ))}
